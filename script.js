@@ -60,7 +60,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Observe all animated elements
 // ----- robust observe + immediate-trigger for in-view elements -----
-const animatedSelector = ".hero-content, .section-header, .skill-category, .project-card, .achievement-card, .about-card, .about-text, .contact-info, .contact-form";
+const animatedSelector = ".hero-content, .section-header, .skill-category, .experience-card, .project-card, .achievement-card, .about-card, .about-text, .contact-info, .contact-form";
 
 document.querySelectorAll(animatedSelector).forEach((el) => {
   const rect = el.getBoundingClientRect();
