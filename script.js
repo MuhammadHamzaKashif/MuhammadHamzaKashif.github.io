@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Smooth Scrolling for Navigation Links
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -43,18 +42,18 @@ const observerOptions = {
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      if (entry.target.classList.contains("about-card") || entry.target.classList.contains("contact-info")) {
-        entry.target.classList.add("animate-left")
-      } else if (entry.target.classList.contains("about-text") || entry.target.classList.contains("contact-form")) {
-        entry.target.classList.add("animate-right")
-      } else {
-        entry.target.classList.add("animate-up")
-      }
-      observer.unobserve(entry.target) // run only once
-    }
-  })
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains("about-card") || entry.target.classList.contains("contact-info")) {
+                entry.target.classList.add("animate-left")
+            } else if (entry.target.classList.contains("about-text") || entry.target.classList.contains("contact-form")) {
+                entry.target.classList.add("animate-right")
+            } else {
+                entry.target.classList.add("animate-up")
+            }
+            observer.unobserve(entry.target) // run only once
+        }
+    })
 }, observerOptions)
 
 
@@ -63,25 +62,25 @@ const observer = new IntersectionObserver((entries, observer) => {
 const animatedSelector = ".hero-content, .section-header, .skill-category, .experience-card, .project-card, .achievement-card, .about-card, .about-text, .contact-info, .contact-form";
 
 document.querySelectorAll(animatedSelector).forEach((el) => {
-  const rect = el.getBoundingClientRect();
-  const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    const rect = el.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
 
-  // function to add the right class (same logic as observer callback)
-  const addAnimClass = (target) => {
-    if (target.classList.contains("about-card") || target.classList.contains("contact-info")) {
-      target.classList.add("animate-left");
-    } else if (target.classList.contains("about-text") || target.classList.contains("contact-form")) {
-      target.classList.add("animate-right");
+    // function to add the right class (same logic as observer callback)
+    const addAnimClass = (target) => {
+        if (target.classList.contains("about-card") || target.classList.contains("contact-info")) {
+            target.classList.add("animate-left");
+        } else if (target.classList.contains("about-text") || target.classList.contains("contact-form")) {
+            target.classList.add("animate-right");
+        } else {
+            target.classList.add("animate-up");
+        }
+    };
+
+    if (inView) {
+        addAnimClass(el); // animate immediately if already visible
     } else {
-      target.classList.add("animate-up");
+        observer.observe(el); // otherwise observe
     }
-  };
-
-  if (inView) {
-    addAnimClass(el); // animate immediately if already visible
-  } else {
-    observer.observe(el); // otherwise observe
-  }
 });
 
 
