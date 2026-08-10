@@ -1,757 +1,756 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Hamza Kashif - Portfolio</title>
+    <title>Muhammad Hamza Kashif · Software Developer</title>
+    <meta name="description"
+        content="Computer Science student at NUST building machine learning models and full-stack web applications. Portfolio, projects, and experience.">
+    <meta property="og:title" content="Muhammad Hamza Kashif · Software Developer">
+    <meta property="og:description"
+        content="CS student at NUST building machine learning models and full-stack web applications.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0c0c0e">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='4'%20fill='%23e0652f'/%3E%3Ctext%20x='32'%20y='44'%20font-family='monospace'%20font-size='28'%20font-weight='700'%20text-anchor='middle'%20fill='%23141416'%3EMH%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <script>
+        document.documentElement.classList.replace("no-js", "js");
+    </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">MHK</div>
-                <div class="nav-links">
-                    <a href="#hero" class="nav-link">Hero</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#achievements" class="nav-link">Achievements</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary">
+        <div class="container nav-inner">
+            <a href="#hero" class="brand">MHK<span class="brand-dot">.</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                <span class="visually-hidden">Menu</span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#achievements" class="nav-link">Recognition</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-bg">
-            <div class="hero-blob hero-blob-1"></div>
-            <div class="hero-blob hero-blob-2"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Muhammad <span class="text-primary">Hamza</span> Kashif
-                </h1>
-                <div class="hero-subtitle">
-                    <span id="typewriter-text" class="typewriter"></span>
-                </div>
-                <p class="hero-description">
-                    Computer Science student at NUST with a passion for machine learning, web development, and creating
-                    innovative solutions to complex problems.
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/MuhammadHamzaKashif" target="_blank" class="social-link glow-effect">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232" target="_blank"
-                        class="social-link glow-effect">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                    </a>
-                    <a href="mailto:hamzakashifkhanzada@gmail.com" class="social-link glow-effect">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z" />
-                        </svg>
-                    </a>
-                </div>
-                <button class="cta-button" onclick="scrollToSection('about')">
-                    Explore My Work
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
-                                </svg>
-                                Education
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <h4 class="education-degree">Bachelor of Science in Computer Science</h4>
-                            <p class="education-university">National University of Sciences and Technology (NUST)</p>
-                            <div class="education-location">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                                </svg>
-                                Islamabad, Pakistan
-                            </div>
-                            <div class="education-details">
-                                <span>Expected Graduation: 2028</span>
-                                <span class="badge" id="CGPA">CGPA: 3.85/4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p class="about-description">
-                        I'm a passionate Computer Science student at NUST with a strong foundation in programming,
-                        machine
-                        learning, and web development. My journey in technology is driven by curiosity and the desire to
-                        create
-                        meaningful solutions.
+    <main id="main">
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Full stack AI engineer · ML &amp; LLM systems</p>
+                    <h1 class="hero-title">Muhammad <span class="accent">Hamza</span> Kashif</h1>
+                    <p class="hero-sub">
+                        CS student at NUST and AI engineer at Synapse, working on LLM systems, machine learning, and
+                        full-stack web apps.
                     </p>
-                    <p class="about-secondary">
-                        With experience in both frontend and backend development, I enjoy building full-stack
-                        applications and
-                        exploring the fascinating world of artificial intelligence. I'm particularly interested in
-                        neural
-                        networks, deep learning, and their practical applications.
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View my work</a>
+                        <a href="#contact" class="btn btn-ghost">
+                            Contact me
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="hero-socials">
+                        <li>
+                            <a href="https://github.com/MuhammadHamzaKashif" target="_blank" rel="noopener noreferrer"
+                                class="social-row">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232"
+                                target="_blank" rel="noopener noreferrer" class="social-row">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:hamzakashifkhanzada@gmail.com" class="social-row">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                                    <path d="m3 7 9 6 9-6" />
+                                </svg>
+                                Email
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="hero-card-wrap reveal" aria-label="Profile summary">
+                    <div class="hero-card">
+                        <p class="hero-card-status">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Open to internships &amp; collaborations
+                        </p>
+                        <dl class="fact-list">
+                            <div class="fact">
+                                <dt>Degree</dt>
+                                <dd>BS Computer Science</dd>
+                            </div>
+                            <div class="fact">
+                                <dt>University</dt>
+                                <dd>NUST, Islamabad</dd>
+                            </div>
+                            <div class="fact">
+                                <dt>CGPA</dt>
+                                <dd class="tabular">3.85 / 4.00</dd>
+                            </div>
+                            <div class="fact">
+                                <dt>Graduation</dt>
+                                <dd class="tabular">Expected 2028</dd>
+                            </div>
+                            <div class="fact">
+                                <dt>Focus</dt>
+                                <dd>LLM Systems · ML · Web</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-aside reveal">
+                    <h2 class="section-title">About me</h2>
+                    <p class="aside-note">Islamabad, Pakistan</p>
+                </div>
+                <div class="about-body reveal">
+                    <p class="lead">
+                        I study Computer Science at NUST and work as a Full Stack AI Engineer at Synapse AI
+                        Solutions. My work spans LLM evaluation and on-device model quantization, alongside
+                        full-stack apps in React, Next.js, and Node.
                     </p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z" />
+                    <p>
+                        Most of my recent work has been hands-on: an LLM evaluation harness for a Socratic tutoring
+                        engine, quantized INT8 intent and safety classifiers compiled for on-device inference, a BERT
+                        emotion classifier, a character-level GPT trained on Shakespeare, and a RAG assistant for
+                        document Q&amp;A.
+                    </p>
+                    <div class="now-block">
+                        <span class="mono-label accent">Currently</span>
+                        <p>Evaluating SLM candidates and shipping quantized on-device classifiers at Synapse AI
+                            Solutions, plus the XCELWIZARD demo and a second Unity game in progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Skills</h2>
+                <div class="skill-rows reveal">
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">Languages</h3>
+                        <ul class="tag-list">
+                            <li class="tag">Python</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">SQL (PostgreSQL / Supabase)</li>
+                            <li class="tag">NoSQL (MongoDB)</li>
+                            <li class="tag">C++</li>
+                            <li class="tag">Java</li>
+                            <li class="tag">HTML5</li>
+                            <li class="tag">CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">ML &amp; DL Frameworks</h3>
+                        <ul class="tag-list">
+                            <li class="tag">PyTorch</li>
+                            <li class="tag">scikit-learn</li>
+                            <li class="tag">NumPy</li>
+                            <li class="tag">Transformers (BERT, DistilBERT)</li>
+                            <li class="tag">LangChain</li>
+                            <li class="tag">Hugging Face</li>
+                        </ul>
+                    </div>
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">Deep Learning</h3>
+                        <ul class="tag-list">
+                            <li class="tag">CNNs</li>
+                            <li class="tag">Character-Level GPT</li>
+                            <li class="tag">Multi-Head Self-Attention</li>
+                            <li class="tag">RAG Pipelines</li>
+                            <li class="tag">Backpropagation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">LLM Systems</h3>
+                        <ul class="tag-list">
+                            <li class="tag">vLLM</li>
+                            <li class="tag">Model Quantization (ONNX / INT8)</li>
+                            <li class="tag">Evaluation Harnesses</li>
+                            <li class="tag">Prompt-Injection Detection</li>
+                        </ul>
+                    </div>
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">Data Science</h3>
+                        <ul class="tag-list">
+                            <li class="tag">Pandas</li>
+                            <li class="tag">Matplotlib</li>
+                            <li class="tag">Seaborn</li>
+                            <li class="tag">Feature Engineering</li>
+                            <li class="tag">Data Normalization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-row">
+                        <h3 class="skill-name mono-label">Tools &amp; Platforms</h3>
+                        <ul class="tag-list">
+                            <li class="tag">Git</li>
+                            <li class="tag">Jupyter Notebooks</li>
+                            <li class="tag">Supabase (Vector DB)</li>
+                            <li class="tag">Next.js</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Node.js</li>
+                            <li class="tag">Express.js</li>
+                            <li class="tag">FastAPI</li>
+                            <li class="tag">Cloudinary</li>
+                            <li class="tag">Flask</li>
+                            <li class="tag">Qt</li>
+                            <li class="tag">Android Studio</li>
+                            <li class="tag">SQLite3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Experience</h2>
+                <div class="timeline reveal">
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <h3 class="exp-title">Full Stack AI Engineer</h3>
+                            <span class="mono-label tag tag-accent">Jun 2026 · Now</span>
+                        </div>
+                        <p class="exp-company">Synapse AI Solutions · Remote</p>
+                        <ul class="exp-list">
+                            <li>Built a full LLM evaluation harness (probe generation, regex + LLM-judge scoring,
+                                Cohen's kappa) for an on-premises Socratic tutoring engine on NVIDIA DGX Spark via
+                                vLLM. Top candidate passed no-answer, grounding, and structured-output gates across
+                                English, Arabic, and Chinese.</li>
+                            <li>Ran multi-user concurrency benchmarks to set serving-capacity SLAs; a multilingual
+                                audit exposed severe language bias in a competing SLM and steered the final model
+                                selection.</li>
+                            <li>Shipped quantized on-device intent and safety classifiers: a multi-task mALBERT
+                                encoder compiled to a single 23MB INT8 ONNX graph, with 99.8% intent accuracy at
+                                sub-220ms p95 latency on real Android hardware.</li>
+                            <li>Fine-tuned a prompt-injection detection classifier to 95.9% F1 (from 68.6%
+                                zero-shot) and red-teamed refusal behavior against a 291-prompt benchmark.</li>
+                            <li>Built a Next.js 16 merchant-facing web app (~7,900 LOC) with an OAuth POS Connect
+                                backend (FastAPI) integrating 31 POS providers including Square and Shopify.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <h3 class="exp-title">Unity Game Developer</h3>
+                            <span class="mono-label tag tag-accent">2026</span>
+                        </div>
+                        <p class="exp-company">
+                            <a href="https://xcelwizard.com/" target="_blank" rel="noopener noreferrer"
+                                class="exp-link">XCELWIZARD</a>
+                            · Contract demo
+                        </p>
+                        <ul class="exp-list">
+                            <li>Shipped the XCELWIZARD demo (xcelwizard.com): a magical-academy game that teaches
+                                Microsoft Excel, delivered as a contract demo.</li>
+                            <li>Built the core gameplay systems in Unity: an in-game spreadsheet engine, Excel-style
+                                autofill, data-validation wards, and the dual-view Lens of Truth.</li>
+                            <li>Implemented quest, dialogue, and progression systems spanning two demo modules.</li>
+                            <li>Continuing development of a second independent Unity game project.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <h3 class="exp-title">Freelance Developer</h3>
+                            <span class="mono-label tag tag-accent">2024</span>
+                        </div>
+                        <p class="exp-company">Remote · Python automation &amp; scripting</p>
+                        <ul class="exp-list">
+                            <li>Built a Python script that automates repetitive API data workflows for a client,
+                                cutting manual processing time.</li>
+                            <li>Worked remotely through requirements gathering, iteration, and production
+                                deployment.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Selected work</h2>
+
+                <article class="project project-featured reveal">
+                    <div class="project-main">
+                        <header class="project-head">
+                            <span class="mono-label accent">AI Assistant</span>
+                            <a href="https://github.com/MuhammadHamzaKashif" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">LINMUB</h3>
+                        <p class="project-desc">
+                            Matchmaking engine for introverts that pairs people by semantic interest similarity,
+                            powered by Xenova Transformers embeddings. Live on Vercel.
+                        </p>
+                        <ul class="tag-list">
+                            <li class="tag">React 19</li>
+                            <li class="tag">Xenova Transformers</li>
+                            <li class="tag">Node.js</li>
+                            <li class="tag">MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://linmub.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">Live site</a>
+                        <a href="https://github.com/MuhammadHamzaKashif" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-ghost">Source</a>
+                    </div>
+                </article>
+
+                <div class="projects-grid">
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Machine learning</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/Image-Classifier-CNN.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Image Classifier CNN</h3>
+                        <p class="project-desc">ConvNet in PyTorch for high-accuracy image recognition and
+                            classification.</p>
+                        <ul class="tag-list">
+                            <li class="tag">PyTorch</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">CNN</li>
+                            <li class="tag">Deep Learning</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Machine learning</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/emotion-classifier-using-BERT.git"
+                                target="_blank" rel="noopener noreferrer" class="icon-link"
+                                aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Emotion Classifier</h3>
+                        <p class="project-desc">NLP model using BERT transformers for sentiment and emotion
+                            detection.</p>
+                        <ul class="tag-list">
+                            <li class="tag">BERT</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">NLP</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Machine learning</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/mnist-NN-using-numpy.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Digit Classifier</h3>
+                        <p class="project-desc">Neural network built from scratch in NumPy for handwritten digit
+                            recognition.</p>
+                        <ul class="tag-list">
+                            <li class="tag">NumPy</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Deep Learning</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Desktop app</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/CR-Connect-Client.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">CR Connect</h3>
+                        <p class="project-desc">Real-time chat client with timed messages and secure socket
+                            communication.</p>
+                        <ul class="tag-list">
+                            <li class="tag">C++</li>
+                            <li class="tag">Qt</li>
+                            <li class="tag">Socket.io</li>
+                            <li class="tag">SQLite3</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Web development</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/Log.It.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Log.It</h3>
+                        <p class="project-desc">Full-stack platform for organized educational content and learning
+                            progress tracking.</p>
+                        <ul class="tag-list">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">SQLite3</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Web development</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/Neighborly.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Neighborly</h3>
+                        <p class="project-desc">Community platform for local help requests, volunteer matching, and
+                            neighborhood events.</p>
+                        <ul class="tag-list">
+                            <li class="tag">Spring Boot</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">Security</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Machine learning</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/Titanic-ML-Classifier.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Titanic ML</h3>
+                        <p class="project-desc">Survival prediction model using scikit-learn with feature
+                            engineering on a classic dataset.</p>
+                        <ul class="tag-list">
+                            <li class="tag">Python</li>
+                            <li class="tag">scikit-learn</li>
+                            <li class="tag">Pandas</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Web development</span>
+                            <a href="https://github.com/MuhammadHamzaKashif/Bolt.git" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Bolt</h3>
+                        <p class="project-desc">MERN social platform with media uploads, messaging, and JWT
+                            authentication.</p>
+                        <ul class="tag-list">
+                            <li class="tag">MERN</li>
+                            <li class="tag">JWT</li>
+                            <li class="tag">Cloudinary</li>
+                        </ul>
+                        <a href="https://bolt-eight-lime.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="inline-link">Live site
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M7 17L17 7M9 7h8v8" />
                             </svg>
-                            hamzakashifkhanzada@gmail.com
-                        </div>
-                        <div class="contact-item">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                            </svg>
-                            +92 346 3978797
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
-                                </svg>
-                                Languages
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="skill-tags">
-                                <span class="skill-tag primary">JavaScript (ES6+)</span>
-                                <span class="skill-tag primary">Python</span>
-                                <span class="skill-tag primary">C++</span>
-                                <span class="skill-tag primary">Java</span>
-                                <span class="skill-tag primary">HTML5</span>
-                                <span class="skill-tag primary">CSS3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75L7 8l10 0z" />
-                                </svg>
-                                Frameworks
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="skill-tags">
-                                <span class="skill-tag accent">React</span>
-                                <span class="skill-tag accent">Node.js</span>
-                                <span class="skill-tag accent">Express.js</span>
-                                <span class="skill-tag accent">REST APIs</span>
-                                <span class="skill-tag accent">JWT Authentication</span>
-                                <span class="skill-tag accent">MERN Stack</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z" />
-                                </svg>
-                                Databases
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="skill-tags">
-                                <span class="skill-tag secondary">MongoDB</span>
-                                <span class="skill-tag secondary">MySQL</span>
-                                <span class="skill-tag secondary">SQLite3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z" />
-                                </svg>
-                                Tools & ML
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="skill-tags">
-                                <span class="skill-tag chart">PyTorch</span>
-                                <span class="skill-tag chart">Scikit-learn</span>
-                                <span class="skill-tag chart">NumPy</span>
-                                <span class="skill-tag chart">RAG Pipelines</span>
-                                <span class="skill-tag chart">BERT</span>
-                                <span class="skill-tag chart">CNNs</span>
-                                <span class="skill-tag chart">Git</span>
-                                <span class="skill-tag chart">Android Studio</span>
-                                <span class="skill-tag chart">Flask</span>
-                                <span class="skill-tag chart">Qt</span>
-                                <span class="skill-tag chart">SFML</span>
-                                <span class="skill-tag chart">POSIX Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="experience-header">
-                                <h3 class="card-title">Unity Game Developer</h3>
-                                <span class="badge web-badge">Ongoing</span>
-                            </div>
-                            <p class="experience-company">Unity Engine</p>
-                        </div>
-                        <div class="card-content">
-                            <ul class="experience-list">
-                                <li>Currently developing two independent game projects using Unity Engine.</li>
-                                <li>Implementing core gameplay mechanics and optimizing performance for target
-                                    platforms.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="experience-header">
-                                <h3 class="card-title">Freelance Developer</h3>
-                                <span class="badge ml-badge">2024</span>
-                            </div>
-                            <p class="experience-company">Remote | Python Automation & Scripting</p>
-                        </div>
-                        <div class="card-content">
-                            <ul class="experience-list">
-                                <li>Developed a Python-based API automation script for a client, streamlining repetitive
-                                    data workflows and reducing manual processing time.</li>
-                                <li>Collaborated remotely to gather requirements, iterate on deliverables, and deploy a
-                                    production-ready solution.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge ml-badge">Machine Learning</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/Image-Classifier-CNN.git"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Image Classifier CNN</h3>
-                            <p class="card-description">ConvNet using PyTorch for high-accuracy image recognition and
-                                classification.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">PyTorch</span>
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">CNN</span>
-                                <span class="project-tag">Deep Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge ml-badge">Machine Learning</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/emotion-classifier-using-BERT.git"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Emotion Classifier</h3>
-                            <p class="card-description">NLP model using BERT transformers for high-accuracy sentiment
-                                and emotion detection.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">BERT</span>
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">NLP</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge ml-badge">Machine Learning</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/mnist-NN-using-numpy.git"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Digit Classifier</h3>
-                            <p class="card-description">Neural network built from scratch using NumPy for hand-written
-                                digit recognition.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">NumPy</span>
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Deep Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge web-badge">Dekstop App Development</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/CR-Connect-Client.git" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">CR Connect</h3>
-                            <p class="card-description">Real-time chat application with timed messages and secure socket
-                                communication.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">C++</span>
-                                <span class="project-tag">Qt</span>
-                                <span class="project-tag">Socket.io</span>
-                                <span class="project-tag">SQLite3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge web-badge">Web Development</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/Log.It.git" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Log.It</h3>
-                            <p class="card-description">Full-stack platform for organized educational content and
-                                learning progress tracking.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">SQLite3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge web-badge">Web Development</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/Neighborly.git" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Neighborly</h3>
-                            <p class="card-description">Community platform for local help requests, volunteer matching,
-                                and neighborhood events.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">Spring Boot</span>
-                                <span class="project-tag">MySQL</span>
-                                <span class="project-tag">Security</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge ml-badge">Machine Learning</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/Titanic-ML-Classifier.git"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Titanic ML</h3>
-                            <p class="card-description">Survival prediction model using Scikit-learn and advanced
-                                feature engineering.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Scikit-learn</span>
-                                <span class="project-tag">Pandas</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge web-badge">Web Development</span>
-                                <a href="https://github.com/MuhammadHamzaKashif/Bolt.git" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Bolt</h3>
-                            <p class="card-description">MERN social platform with media uploads, messaging, and secure
-                                JWT authentication.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">MERN</span>
-                                <span class="project-tag">JWT</span>
-                                <span class="project-tag">Cloudinary</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://bolt-eight-lime.vercel.app/" target="_blank" class="badge web-badge">Go
-                                    to website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge web-badge">Web Development</span>
-                                <a href="https://github.com/MuhammadHamzaKashif" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">LINMUB</h3>
-                            <p class="card-description">AI-powered social discovery for introverts using semantic
-                                interest-based pairing.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">React 19</span>
-                                <span class="project-tag">AI/Transformers</span>
-                                <span class="project-tag">Framer Motion</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://linmub.vercel.app/" target="_blank" class="badge web-badge">Go to
-                                    website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="project-header">
-                                <span class="badge ml-badge">AI Assistant</span>
-                                <a href="https://github.com/MuhammadHamzaKashif" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <h3 class="card-title">Second Brain</h3>
-                            <p class="card-description">RAG-based AI assistant for document Q&A using LangChain, Gemini,
-                                and Supabase.</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-tags">
-                                <span class="project-tag">Next.js</span>
-                                <span class="project-tag">LangChain</span>
-                                <span class="project-tag">Gemini</span>
-                                <span class="project-tag">Supabase</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Achievements</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="achievement-content">
-                                <div class="achievement-icon">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
-                                    </svg>
-                                </div>
-                                <div class="achievement-text">
-                                    <h3 class="card-title">1st Position - Intermediate Exams</h3>
-                                    <p class="card-description">Pre-Engineering Group, Multan Board</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-card">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="achievement-content">
-                                <div class="achievement-icon">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm2.7-2h8.6l.9-5.4-2.1 1.4L12 8l-3.1 2L6.8 8.6L7.7 14z" />
-                                    </svg>
-                                </div>
-                                <div class="achievement-text">
-                                    <h3 class="card-title">1st Position - KC Battle of the Brains</h3>
-                                    <p class="card-description">District-wide competition for matric students</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">
-                    I'm always open to discussing new opportunities, collaborations, or just having a chat about
-                    technology.
-                </p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 class="contact-title">Let's Connect</h3>
-                    <div class="contact-links">
-                        <a href="mailto:hamzakashifkhanzada@gmail.com" class="contact-link">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z" />
-                            </svg>
-                            <div>
-                                <p class="contact-label">Email</p>
-                                <p class="contact-value">hamzakashifkhanzada@gmail.com</p>
-                            </div>
                         </a>
-                        <a href="tel:+923463978797" class="contact-link">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">AI Assistant</span>
+                            <a href="https://github.com/MuhammadHamzaKashif" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Second Brain</h3>
+                        <p class="project-desc">RAG pipeline that ingests uploaded documents into a Supabase vector
+                            store and injects retrieved context into every LLM call, with streaming responses.</p>
+                        <ul class="tag-list">
+                            <li class="tag">Next.js</li>
+                            <li class="tag">LangChain</li>
+                            <li class="tag">Gemini</li>
+                            <li class="tag">Supabase</li>
+                        </ul>
+                    </article>
+
+                    <article class="project reveal">
+                        <header class="project-head">
+                            <span class="mono-label accent">Machine learning</span>
+                            <a href="https://github.com/MuhammadHamzaKashif" target="_blank"
+                                rel="noopener noreferrer" class="icon-link" aria-label="Source code on GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">Shakespeare Text Generator</h3>
+                        <p class="project-desc">Character-level GPT transformer built from scratch in PyTorch:
+                            multi-head self-attention, positional embeddings, and feed-forward blocks, trained on
+                            Hamlet.</p>
+                        <ul class="tag-list">
+                            <li class="tag">PyTorch</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">GPT Architecture</li>
+                            <li class="tag">Transformers</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="project project-featured reveal">
+                    <div class="project-main">
+                        <header class="project-head">
+                            <span class="mono-label accent">Game development</span>
+                            <a href="https://xcelwizard.com/" target="_blank" rel="noopener noreferrer"
+                                class="icon-link" aria-label="XCELWIZARD demo website">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M9 7h8v8" />
+                                </svg>
+                            </a>
+                        </header>
+                        <h3 class="project-title">XCELWIZARD</h3>
+                        <p class="project-desc">
+                            A magical-academy game that teaches Microsoft Excel. I built the core gameplay systems:
+                            an in-game spreadsheet engine, Excel-style autofill, data-validation wards, and the
+                            dual-view Lens of Truth. Free Windows demo, live at xcelwizard.com.
+                        </p>
+                        <ul class="tag-list">
+                            <li class="tag">Unity</li>
+                            <li class="tag">C#</li>
+                            <li class="tag">Game Dev</li>
+                            <li class="tag">EdTech</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://xcelwizard.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">Play the demo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Recognition</h2>
+                <div class="achievements-grid">
+                    <article class="achievement reveal">
+                        <span class="ach-marker" aria-hidden="true"></span>
+                        <div>
+                            <span class="mono-label accent">Academic</span>
+                            <h3 class="ach-title">1st place, Intermediate Exams</h3>
+                            <p class="ach-desc">Pre-Engineering group, Multan Board</p>
+                        </div>
+                    </article>
+                    <article class="achievement reveal">
+                        <span class="ach-marker" aria-hidden="true"></span>
+                        <div>
+                            <span class="mono-label accent">Competition</span>
+                            <h3 class="ach-title">1st place, KC Battle of the Brains</h3>
+                            <p class="ach-desc">District-wide quiz competition for matric students</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="contact-aside reveal">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="contact-note">
+                        Open to internships, freelance work, and collaborations. If you have a project in mind, or
+                        just want to talk ML and web development, send a message.
+                    </p>
+                    <div class="contact-rows">
+                        <a href="mailto:hamzakashifkhanzada@gmail.com" class="contact-row">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
                             </svg>
-                            <div>
-                                <p class="contact-label">Phone</p>
-                                <p class="contact-value">+92 346 3978797</p>
-                            </div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">hamzakashifkhanzada@gmail.com</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232" target="_blank"
-                            class="contact-link">
-                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="tel:+923463978797" class="contact-row">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value tabular">+92 346 3978797</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232"
+                            target="_blank" rel="noopener noreferrer" class="contact-row">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
-                            <div>
-                                <p class="contact-label">LinkedIn</p>
-                                <p class="contact-value">Connect with me</p>
-                            </div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">Connect with me</span>
                         </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Send a Message</h3>
-                            <p class="card-description">
-                                Fill out the form below and I'll get back to you as soon as possible.
-                            </p>
+
+                <div class="contact-form-card reveal">
+                    <h3 class="form-title">Send a message</h3>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name"
+                                    required>
+                                <p class="field-error" id="name-error" role="alert"></p>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" autocomplete="email"
+                                    placeholder="your.email@example.com" required>
+                                <p class="field-error" id="email-error" role="alert"></p>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <form id="contact-form">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" name="name" placeholder="Your name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" id="email" name="email" placeholder="your.email@example.com"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" id="subject" name="subject" placeholder="What's this about?"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" rows="5" placeholder="Your message..."
-                                        required></textarea>
-                                </div>
-                                <button type="submit" class="submit-button">Send Message</button>
-                            </form>
+                        <div class="field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                            <p class="field-error" id="subject-error" role="alert"></p>
                         </div>
-                    </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message..."
+                                required></textarea>
+                            <p class="field-error" id="message-error" role="alert"></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send message</button>
+                        <p class="form-success" id="form-success" role="status">
+                            Message ready. Your email client should open with the draft.
+                        </p>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Muhammad Hamza Kashif. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://github.com/MuhammadHamzaKashif" target="_blank" class="footer-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232" target="_blank"
-                        class="footer-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                    </a>
-                    <a href="mailto:hamzakashifkhanzada@gmail.com" class="footer-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z" />
-                        </svg>
-                    </a>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; 2026 Muhammad Hamza Kashif</p>
+            <p class="footer-note mono-label">Built with HTML, CSS, JavaScript</p>
+            <div class="footer-links">
+                <a href="https://github.com/MuhammadHamzaKashif" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-hamza-kashif-khanzada-33b4a1232" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="mailto:hamzakashifkhanzada@gmail.com" aria-label="Email">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 7 9 6 9-6" />
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>

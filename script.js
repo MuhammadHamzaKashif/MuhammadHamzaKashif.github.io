@@ -1,185 +1,135 @@
-// Typewriter Effect
-document.addEventListener("DOMContentLoaded", () => {
-    const typewriterElement = document.getElementById("typewriter-text")
-    const fullText = "Aspiring Computer Scientist & Developer"
-    let i = 0
+(function () {
+    "use strict";
 
-    function typeWriter() {
-        if (i < fullText.length) {
-            typewriterElement.textContent += fullText.charAt(i)
-            i++
-            setTimeout(typeWriter, 100)
-        }
-    }
+    /* ---------- Mobile nav ---------- */
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
 
-    typeWriter()
-})
+    if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+            const open = navMenu.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(open));
+        });
 
+        navMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
 
-function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId)
-    if (element) {
-        element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        })
-    }
-}
-
-// Add click event listeners to navigation links
-document.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault()
-        const targetId = this.getAttribute("href").substring(1)
-        scrollToSection(targetId)
-    })
-})
-
-// Intersection Observer for Animation Triggers
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-}
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            if (entry.target.classList.contains("about-card") || entry.target.classList.contains("contact-info")) {
-                entry.target.classList.add("animate-left")
-            } else if (entry.target.classList.contains("about-text") || entry.target.classList.contains("contact-form")) {
-                entry.target.classList.add("animate-right")
-            } else {
-                entry.target.classList.add("animate-up")
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && navMenu.classList.contains("open")) {
+                navMenu.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.focus();
             }
-            observer.unobserve(entry.target) // run only once
-        }
-    })
-}, observerOptions)
+        });
+    }
 
+    /* ---------- Scroll reveal ---------- */
+    const revealEls = document.querySelectorAll(".reveal");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Observe all animated elements
-// ----- robust observe + immediate-trigger for in-view elements -----
-const animatedSelector = ".hero-content, .section-header, .skill-category, .experience-card, .project-card, .achievement-card, .about-card, .about-text, .contact-info, .contact-form";
-
-document.querySelectorAll(animatedSelector).forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight && rect.bottom > 0;
-
-    // function to add the right class (same logic as observer callback)
-    const addAnimClass = (target) => {
-        if (target.classList.contains("about-card") || target.classList.contains("contact-info")) {
-            target.classList.add("animate-left");
-        } else if (target.classList.contains("about-text") || target.classList.contains("contact-form")) {
-            target.classList.add("animate-right");
-        } else {
-            target.classList.add("animate-up");
-        }
-    };
-
-    if (inView) {
-        addAnimClass(el); // animate immediately if already visible
+    if (reduced || !("IntersectionObserver" in window)) {
+        revealEls.forEach((el) => el.classList.add("in"));
     } else {
-        observer.observe(el); // otherwise observe
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        revealEls.forEach((el) => revealObserver.observe(el));
     }
-});
 
+    /* ---------- Active nav link ---------- */
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-// Active Navigation Link Highlighting
-window.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section[id]")
-    const navLinks = document.querySelectorAll(".nav-link")
+    if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach((link) => {
+                        const target = link.getAttribute("href").substring(1);
+                        link.classList.toggle("active", target === entry.target.id);
+                    });
+                });
+            },
+            { rootMargin: "-40% 0px -55% 0px" }
+        );
+        sections.forEach((section) => sectionObserver.observe(section));
+    }
 
-    let current = ""
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop
-        const sectionHeight = section.clientHeight
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute("id")
+    /* ---------- Form validation ---------- */
+    const form = document.getElementById("contact-form");
+    if (form) {
+        const fields = {
+            name: form.querySelector("#name"),
+            email: form.querySelector("#email"),
+            subject: form.querySelector("#subject"),
+            message: form.querySelector("#message"),
+        };
+        const successMsg = document.getElementById("form-success");
+
+        const validators = {
+            name: (value) =>
+                value.trim().length >= 2
+                    ? ""
+                    : "Please enter your name (at least 2 characters).",
+            email: (value) => {
+                const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+                return ok ? "" : "Please enter a valid email address.";
+            },
+            subject: (value) =>
+                value.trim() ? "" : "Please add a subject.",
+            message: (value) =>
+                value.trim().length >= 10
+                    ? ""
+                    : "Your message should be at least 10 characters.",
+        };
+
+        function validateField(name) {
+            const field = fields[name];
+            const error = validators[name](field.value);
+            field.closest(".field").classList.toggle("invalid", Boolean(error));
+            return error;
         }
-    })
 
-    navLinks.forEach((link) => {
-        link.classList.remove("active")
-        if (link.getAttribute("href").substring(1) === current) {
-            link.classList.add("active")
-        }
-    })
-})
+        Object.keys(fields).forEach((name) => {
+            fields[name].addEventListener("input", () => validateField(name));
+        });
 
-// Form Submission Handler
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault()
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            successMsg.classList.remove("visible");
 
-    // Get form data
-    const formData = new FormData(this)
-    const name = formData.get("name")
-    const email = formData.get("email")
-    const subject = formData.get("subject")
-    const message = formData.get("message")
+            const errors = {};
+            Object.keys(fields).forEach((name) => {
+                errors[name] = validateField(name);
+            });
 
-    // Create mailto link
-    const mailtoLink = `mailto:hamzakashifkhanzada@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+            const firstInvalid = Object.keys(fields).find((name) => errors[name]);
+            if (firstInvalid) {
+                fields[firstInvalid].focus();
+                return;
+            }
 
-    // Open email client
-    window.location.href = mailtoLink
+            const data = new FormData(form);
+            const subject = data.get("subject");
+            const body = `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`;
+            const mailto = `mailto:hamzakashifkhanzada@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailto;
 
-    // Show success message (optional)
-    alert("Thank you for your message! Your email client should open now.")
-
-    // Reset form
-    this.reset()
-})
-
-// Add hover effects to project cards
-document.querySelectorAll(".project-card").forEach((card) => {
-    card.addEventListener("mouseenter", function () {
-        this.style.transform = "translateY(-10px)"
-    })
-
-    card.addEventListener("mouseleave", function () {
-        this.style.transform = "translateY(0)"
-    })
-})
-
-// Add glow effect to social links
-document.querySelectorAll(".social-link").forEach((link) => {
-    link.addEventListener("mouseenter", function () {
-        this.style.boxShadow = "0 0 20px var(--accent)"
-    })
-
-    link.addEventListener("mouseleave", function () {
-        this.style.boxShadow = "none"
-    })
-})
-
-// Parallax effect for hero background
-window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset
-    const parallax = document.querySelector(".hero-bg")
-    const speed = scrolled * 0.5
-
-    if (parallax) {
-        parallax.style.transform = `translateY(${speed}px)`
+            successMsg.classList.add("visible");
+            form.reset();
+        });
     }
-})
-
-// Add CSS class for active nav link
-const style = document.createElement("style")
-style.textContent = `
-    .nav-link.active {
-        color: var(--accent) !important;
-        position: relative;
-    }
-    
-    .nav-link.active::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--accent);
-        border-radius: 1px;
-    }
-`
-document.head.appendChild(style)
+})();
